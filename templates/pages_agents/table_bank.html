@@ -1,0 +1,46 @@
+{% extends 'layouts/base.html'%} {% block content %}
+
+<!--/.Navbar-->
+<br>
+<br>
+<br>
+<div class="card">
+
+
+    <table id="example" class="table table-striped table-bordered dt-responsive " style="width:100%">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Numero</th>
+                <th>Addresse</th>
+                <th>Identifiant</th>
+                <th>Type compte</th>
+                <th>Montant</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data %}
+            <tr>
+                <td>{{data.nom}}</td>
+                <td>{{data.prenom}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.numero}}</td>
+                <td>{{data.address}}</td>
+                <td>{{data.identifiant}}</td>
+                <td>{{data.compte}}</td>
+                <td>{{data.montant}}</td>
+            </tr>
+            {% endfor %}
+
+
+
+
+        </tbody>
+    </table>
+
+</div>
+<!-- Card -->
+<br>
+<br> {% endblock %}

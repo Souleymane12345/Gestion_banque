@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html'%} {% block content %}
+<!--/.Navbar-->
+<!-- Default form login -->
+<form class="text-center border border-light p-5" method="post" action="{% url 'banks:connexion_users' %}">
+    {% csrf_token %}
+    <p class="h4 mb-4">Identification d'un utilisateur </p>
+
+    <!-- Email -->
+    <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Email">
+
+    <!-- Password -->
+    <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Se souvenir de moi</label>
+            </div>
+        </div>
+        <div>
+            <!-- Forgot password -->
+            <a href="">Mot de passe oublié?</a>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-success btn-block my-4" type="submit">S'identifier</button>
+
+    <!-- Register -->
+    <p>Etes vous une nouvelle banque ?
+        <a href="{% url 'banks:inscription_users' %}">S'inscrire</a>
+    </p>
+
+    <!-- Social login -->
+
+    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+</form>
+
+{% endblock %}

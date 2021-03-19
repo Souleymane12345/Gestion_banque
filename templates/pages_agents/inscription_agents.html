@@ -1,0 +1,53 @@
+{% extends 'layouts/base.html'%}{% block content %}
+
+<!-- Default form register -->
+<form class="text-center border border-light p-5" method="post" action="{% url 'banks:inscription_agents' %}">
+    {% csrf_token %}
+    <p class="h4 mb-4">Inscription d'un agent</p>
+
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <input type="text" id="name" name="name" class="form-control" placeholder="Nom">
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Prénom">
+        </div>
+    </div>
+
+    <!-- ID -->
+    <input type="idA" id="idA" name="idA" class="form-control mb-4" placeholder="Identifiant agent">
+
+    <!-- E-mail -->
+    <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-2">
+        Au moins 8 caractère
+    </small>
+
+    <!-- Phone number -->
+    <input type="text" id="number" name="number" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+    <!-- Adresse -->
+    <input type="text" id="adress" name="adress" class="form-control mb-4" placeholder="Adresse " aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+
+
+    <!-- Sign up button -->
+    <button class="btn btn-success my-4 btn-block" type="submit">S'inscrire</button>
+
+
+
+    <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+    <hr>
+
+
+</form>
+{% endblock %}

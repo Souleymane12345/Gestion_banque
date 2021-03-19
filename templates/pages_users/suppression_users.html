@@ -1,0 +1,26 @@
+{% extends 'layouts/base.html'%} {% block content %}
+
+
+<!--Form-->
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" method="post" action="{% url 'banks:suppression_users' %}">
+    {% csrf_token %}
+    <p class="h4 mb-4">Supprimer un compte </p>
+
+    <!-- Id -->
+    <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Identification">
+
+    <!--Mot de passe -->
+    <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password">
+
+
+
+    <!-- Send button -->
+    <button class="btn btn-success btn-block" type="submit">Soumettre</button>
+
+</form>
+
+<!--Form-->
+
+
+{% endblock %}

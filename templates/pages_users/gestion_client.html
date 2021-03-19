@@ -1,0 +1,99 @@
+{% extends 'layouts/base.html'%} {% block content %}
+
+<br>
+<!-- Card deck -->
+<!-- Card deck -->
+<div class="card-deck">
+
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Form-->
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" method="post" action="{% url 'banks:depot' %}" style="background-color:rgba(255, 153, 0, 0.797)">
+            {% csrf_token %}
+            <p class="h4 mb-4">Dépot </p>
+
+            <!-- Id -->
+            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Identification">
+
+            <!--Mot de passe -->
+            <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password">
+
+            <!-- Montant -->
+            <input type="text" id="montant" name="montant" class="form-control mb-4" placeholder="Montant">
+
+            <!-- Send button -->
+            <button class="btn btn-success btn-block" type="submit">Soumettre</button>
+
+        </form>
+        <!-- Default form contact -->
+
+
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Form-->
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" method="post" action="{% url 'banks:retrait' %}" style="background-color:rgba(255, 204, 0, 0.797)">
+            {% csrf_token %}
+            <p class="h4 mb-4">Rétrait </p>
+
+            <!-- Id -->
+            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Identification">
+
+            <!--Mot de passe -->
+            <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password">
+
+            <!-- Montant -->
+            <input type="text" id="montant" name="montant" class="form-control mb-4" placeholder="Montant">
+
+            <!-- Send button -->
+            <button class="btn btn-success btn-block" type="submit">Soumettre</button>
+
+        </form>
+
+
+
+
+    </div>
+    <div class="card mb-4" style="background-color:rgba(200, 255, 0, 0.797)">
+
+        <!--Form-->
+        <!-- Default form contact -->
+        <form class="text-center border border-light p-5" method="post" action="{% url 'banks:transfert' %}">
+            {% csrf_token %}
+            <p class="h4 mb-4">Transfert </p>
+
+            <!-- Id -->
+            <input type="email" id="email" name="email" class="form-control mb-4" placeholder="Identification">
+
+            <!--Mot de passe -->
+            <input type="password" id="password" name="password" class="form-control mb-4" placeholder="Password">
+
+            <!--Numéro -->
+            <input type="text" id="montant" name="montant" class="form-control mb-4" placeholder="Montant">
+
+            <!-- Montant -->
+            <input type="email" id="email1" name="email1" class="form-control mb-4" placeholder="Email destinataire">
+
+            <!-- Send button -->
+            <button class="btn btn-success btn-block" type="submit">Soumettre</button>
+
+        </form>
+
+        <!--Form-->
+
+
+    </div>
+    <!-- Card -->
+
+    <!-- Card -->
+
+    <!-- Card -->
+
+</div>
+{% endblock %}

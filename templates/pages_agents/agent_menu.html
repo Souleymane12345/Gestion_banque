@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html'%} {% block content %}
+
+
+<br>
+<!-- Card deck -->
+<!-- Card deck -->
+<div class="card-deck">
+
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!--Title-->
+            <h4 class="card-title">Créér un agent</h4>
+            <!--Text-->
+
+            <a href="{% url 'banks:inscription_agents' %}">
+                <button type="button" class="btn btn-light-blue btn-md">Valider</button>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!--Title-->
+            <h4 class="card-title">Supprimer un utilisateur</h4>
+
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+
+
+            <a href="#!">
+
+                <button type="button" class="btn btn-light-blue btn-md">Valider</button>
+
+            </a>
+
+        </div>
+
+    </div>
+    <!-- Card -->
+    <div class="card mb-4">
+
+        <!--Card image-->
+        <div class="view overlay">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+
+        <!--Card content-->
+        <div class="card-body">
+
+            <!--Title-->
+            <h4 class="card-title">Espace de gestion des comptes</h4>
+            <!--Text-->
+
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+
+
+            <a href="{% url 'banks:bank_menu' %}">
+
+                <button type="button" class="btn btn-light-blue btn-md">Valider</button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Card -->
+
+</div>
+{% endblock %}
+<!-- Card deck -->
